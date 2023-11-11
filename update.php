@@ -31,7 +31,6 @@ $userup=['id1'=>$_REQUEST['id1'],'name1'=>$_REQUEST['name1'],'family1'=>$_REQUES
 $data=json_decode(file_get_contents('file.txt'),true);
 //echo "id".$data[0]['id'];
 $id=$data[0]['id'];
-
 $data=array_filter($data, function ($user) use($id)
 {
     return $user['id']!=$id;
